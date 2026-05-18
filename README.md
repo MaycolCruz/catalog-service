@@ -43,6 +43,7 @@ Controller → Service → Repository → Supabase (PostgreSQL)
     "created_at": "2026-05-18T21:02:35.028555"
   }
 ]
+```
 ## Comunicación con Supabase
 
 ### Configuración de cliente
