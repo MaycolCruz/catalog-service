@@ -333,17 +333,6 @@ Cada push realizado a la rama `main` ejecuta automáticamente el pipeline de val
 
 ---
 
-# Deploy
-
-El microservicio puede desplegarse en:
-
-- Render
-- Railway
-- Vercel (Serverless)
-- Docker
-
----
-
 # Integración con frontend
 
 El frontend consume los endpoints:
