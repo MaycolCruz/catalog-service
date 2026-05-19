@@ -31,5 +31,10 @@ jobs:
       - name: Run tests
         run: echo "No tests yet"
 
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
       - name: Build success
         run: echo "Catalog Service CI passed"
