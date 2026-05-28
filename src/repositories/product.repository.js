@@ -89,6 +89,23 @@ class ProductRepository {
     return data
 
   }
+
+  
+  async deleteProduct(id) {
+
+  const { data, error } =
+    await supabase
+      .from('products')
+      .delete()
+      .eq('product_id', id)
+
+  if (error) throw error
+
+  return data
+
+}
+
+  
 async getProductsByVendor(vendorId) {
 
   const { data, error } =
