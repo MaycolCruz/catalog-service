@@ -45,6 +45,12 @@ router.put(
   productController.updateProduct
 )
 
+// ELIMINAR PRODUCTO  👈 AGREGA ESTO
+router.delete(
+  '/products/:id',
+  productController.deleteProduct
+)
+
 // Cambiar estado producto
 router.patch(
   '/products/:id/status',
