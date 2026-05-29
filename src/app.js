@@ -10,6 +10,9 @@ require('./routes/product.routes')
 const categoryRoutes =
 require('./routes/category.routes')
 
+const vendorProductRoutes =
+require('./routes/vendor-product.routes')
+
 const app = express()
 
 app.use(cors())
@@ -19,6 +22,8 @@ app.use(express.json())
 app.use('/api', productRoutes)
 
 app.use('/api', categoryRoutes)
+
+app.use('/api', vendorProductRoutes)
 
 /*
 |--------------------------------------------------------------------------
