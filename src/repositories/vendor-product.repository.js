@@ -19,26 +19,30 @@ class VendorProductRepository {
 
   async getVendorProducts(vendorId) {
 
-    const { data, error } =
-      await supabase
-        .from('vendor_products')
-        .select(`
-          *,
-          products (
-            product_id,
-            product_name,
-            product_brand,
-            image_url,
-            product_description
+  const { data, error } =
+    await supabase
+      .from('vendor_products')
+      .select(`
+        *,
+        products (
+          product_id,
+          product_name,
+          product_brand,
+          image_url,
+          product_description,
+
+          categories (
+            category_name
           )
-        `)
-        .eq('vendor_id', vendorId)
+        )
+      `)
+      .eq('vendor_id', vendorId)
 
-    if (error) throw error
+  if (error) throw error
 
-    return data
+  return data
 
-  }
+}
 
   async updateVendorProduct(
     id,
