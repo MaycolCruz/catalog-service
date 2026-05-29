@@ -73,10 +73,5 @@ router.get(
   productController.getProductsByVendor
 )
 
-// Crear producto por vendor
-router.post(
-  '/vendors/:vendorId/products',
-  productController.createVendorProduct
-)
 
 module.exports = router
