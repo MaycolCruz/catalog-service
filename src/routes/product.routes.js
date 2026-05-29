@@ -67,6 +67,12 @@ router.patch(
 // Obtener productos por vendor
 router.get(
   '/vendors/:vendorId/products',
+  
+// Crear producto por vendor
+router.post(
+  '/vendors/:vendorId/products',
+  productController.createVendorProduct
+)
 
 //  internalMiddleware,
 
