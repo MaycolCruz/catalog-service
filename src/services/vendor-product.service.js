@@ -43,6 +43,13 @@ class VendorProductService {
 
   }
 
+  async getVendorsWithProducts() {
+
+  return await vendorProductRepository
+    .getVendorsWithProducts()
+
+}
+
 }
 
 module.exports =
