@@ -81,6 +81,22 @@ class VendorProductRepository {
     return true
 
   }
+  
+  async getVendorsWithProducts() {
+
+  const { data, error } =
+    await supabase
+      .from('vendor_products')
+      .select('vendor_id')
+
+  if (error) throw error
+
+  const vendorIds =
+    [...new Set(data.map(item => item.vendor_id))]
+
+  return vendorIds
+
+}
 
 }
 
