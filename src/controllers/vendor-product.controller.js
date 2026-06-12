@@ -122,7 +122,7 @@ async (req, res) => {
 
     res.json({
       success: true,
-      data: result
+      vendors_id: result
     })
 
   } catch (error) {
