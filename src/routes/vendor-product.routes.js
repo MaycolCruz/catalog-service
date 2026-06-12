@@ -14,6 +14,12 @@ router.post(
   controller.createVendorProduct
 )
 
+// NUEVO ENDPOINT
+router.get(
+  '/vendor-products/vendors',
+  controller.getVendorsWithProducts
+)
+
 router.get(
   '/vendor-products/:vendorId',
   controller.getVendorProducts
