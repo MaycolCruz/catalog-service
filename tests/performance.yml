@@ -1,0 +1,18 @@
+config:
+  target: "https://catalog-service-production-58a6.up.railway.app"
+
+  phases:
+    - duration: 30
+      arrivalRate: 5
+
+scenarios:
+  - name: Catalog Performance Test
+    flow:
+      - get:
+          url: "/api/products"
+
+      - get:
+          url: "/api/categories"
+
+      - get:
+          url: "/api/vendor-products"
